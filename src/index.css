@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .modal-bg {
+    @apply fixed top-0 left-0 w-full h-screen z-[20] pt-[100px] bg-[#D9D9D9BF] flex justify-center;
+  }
+  .modal-bg2 {
+    @apply fixed top-0 left-0 w-full h-screen z-[20] bg-[#D9D9D9BF] flex justify-center;
+  }
+
+  .nav-item a {
+    @apply w-[200px] lg:w-full bg-[#1D8EEDC7] py-[5px] text-white text-center border border-[#FFFFFF2B];
+  }
+
+  .heading {
+    @apply hidden sm:block w-full py-[30px] 2xl:pt-[57.58px] pl-[30px] 2xl:pl-[81px] 2xl:pb-[33.5px] border-b border-[#969696];
+  }
+  .heading > h1 {
+    @apply font-Montserrat font-bold text-[28px] 2xl:text-[32px];
+  }
+  .content {
+    @apply py-[20px] 2xl:py-[40px] px-[30px] 2xl:px-[80px];
+  }
+
+  .progress-tracker .page-nav > span {
+    @apply w-[36px] h-[37px] grid place-items-center text-[18px] font-Poppins rounded-[10px] cursor-pointer;
+  }
+  .progress-tracker table tr th {
+    @apply pb-[20px];
+  }
+  .progress-tracker table tr td {
+    @apply pt-[20px] pb-[10px];
+  }
+
+  .classes table th,
+  .pay-history th,
+  .pay-history td,
+  .classes table td {
+    @apply border border-[gray] py-[5px] md:py-[20px] px-[10px] md:px-[20px];
+  }
+
+  /* .payment form label {
+    @apply w-[250px] font-Poppins font-[500];
+  }
+  .payment form .input {
+    @apply bg-[#E2E8F0] h-[42px] flex-1 px-[10px] rounded-[8px];
+  } */
+  .payment .form label {
+    @apply w-[250px] font-Poppins font-[500];
+  }
+  .payment .form .input {
+    @apply bg-[#E2E8F0] py-[13px] flex-1 px-[10px] rounded-[8px];
+  }
+  .payment .form .div {
+    @apply flex items-center gap-[30px];
+  }
+  .payment .form a {
+    @apply flex items-center gap-[5px];
+  }
+  .payment .form a p {
+    @apply font-Poppins font-[500];
+  }
+
+  .feedback form > div {
+    @apply flex gap-[10px] items-center;
+  }
+  .feedback form > div p {
+    @apply w-[200px] text-[14px] font-bold font-Opensans;
+  }
+  .feedback form input,
+  .feedback form select,
+  .feedback form textarea {
+    @apply p-[4px] w-[400px] border-[#949494] border rounded-[4px];
+  }
+
+  .settings .links a {
+    @apply px-[10px] text-[14px] font-Opensans border-b-[1.23px]  pb-[10px] font-semibold;
+  }
+  .account-setting .form input,
+  .account-setting .form textarea {
+    @apply mt-[5px] block w-full px-[15px] py-[8px] bg-[#EDF2F7] rounded-[4.5px];
+  }
+  .account-setting .form label {
+    @apply text-[14px] font-[500] font-Poppins text-[#4C535F];
+  }
+
+  .collapse-red th,
+  .collapse-red td {
+    @apply border-[gray] border px-[5px] py-[7px] font-Opensans;
+  }
+
+  .change-password section > div {
+    @apply flex justify-between gap-[10px] items-center;
+  }
+  .change-password section div label {
+    @apply font-[600] w-[200px];
+  }
+  .change-password section > div span {
+    @apply flex-1 px-[10px] py-[4px] flex justify-between gap-[5px] border border-black rounded-[5px];
+  }
+  .change-password section > div span input {
+    @apply flex-1 outline-none border-none bg-transparent;
+  }
+
+  .react-modal-content {
+    @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 p-5 rounded-lg bg-white border border-gray-300 shadow-md z-10;
+  }
+  .react-modal-content h2 {
+    @apply text-center uppercase text-[20px] font-bold;
+  }
+  .react-modal-content form {
+    @apply flex flex-col;
+  }
+  .react-modal-content form input {
+    @apply mt-[5px] mb-[10px] block w-full p-2 rounded-md border border-gray-300;
+  }
+  .react-modal-content form button {
+    @apply w-full mt-2.5 p-2.5 rounded-md bg-blue text-white;
+  }
+  .react-modal-content form button:nth-of-type(2) {
+    @apply bg-red-600 text-white;
+  }
+
+  .auth-page {
+    @apply border border-[#00000040] rounded-[15px] py-[14px] px-[20px] vsm:px-[40px];
+  }
+  .auth-footer {
+    @apply border border-[#00000040] rounded-[15px] py-[14px] px-[20px] vsm:px-[40px] mt-[60px] flex flex-col gap-[15px] md:gap-0 md:flex-row justify-between items-end md:items-center shadow-custom2 font-Montserrat;
+  }
+  .auth-footer a {
+    @apply w-[100px] md:w-fit border flex justify-center border-blue text-blue rounded-[8px] px-[10px] sm:px-[30px] py-[8px] font-bold;
+  }
+  .auth-footer button {
+    @apply w-[100px] md:w-fit flex justify-center gap-[15px] items-center bg-blue text-white rounded-[8px] px-[10px] sm:px-[30px] py-[8px] font-bold;
+  }
+
+  .auth-upload-page table th {
+    @apply px-[20px] py-[10px] text-[14px] font-medium font-Poppins;
+  }
+  .auth-upload-page table td {
+    @apply border-b-[1px] border-b-[#D0D5DD] px-[20px] py-[10px] font-medium font-Poppins text-blue;
+  }
+
+  .auth-upload-page .upload-grid > div {
+    @apply w-full relative rounded-[10px] overflow-hidden;
+  }
+  .auth-upload-page .upload-grid .select {
+    @apply w-full h-[200px] rounded-[10px] flex flex-col items-center justify-center border-dashed border border-[#186BAD] bg-[#186BAD]/20;
+  }
+  .auth-upload-page .upload-grid .select svg {
+    @apply text-[38.57px] text-[#0162E8];
+  }
+  .auth-upload-page .upload-grid .select p {
+    @apply mt-[10px] text-[#364261] text-center font-Montserrat font-[600];
+  }
+  .auth-upload-page .upload-grid .select h5 {
+    @apply mb-[10px] text-[13.5px] text-[#364261] text-center font-Montserrat font-[600];
+  }
+  .auth-upload-page .upload-grid .select button {
+    @apply border border-[#186BAD] text-[#186BAD] rounded-[8px] px-[25px] py-[5px] font-Montserrat font-[600];
+  }
+  .auth-upload-page .upload-grid .file {
+    @apply absolute left-0 top-0 w-full h-full px-[40px] bg-white rounded-[10px] border-[1px] border-[#186BAD] text-[#186BAD] flex flex-col items-center gap-[10px] justify-center;
+  }
+  .auth-upload-page .upload-grid .file svg {
+    @apply text-[38.57px] text-[#0162E8];
+  }
+  .auth-upload-page .upload-grid .file p {
+    @apply w-fit text-[16px];
+  }
+  .auth-upload-page .upload-grid .file button {
+    @apply bg-[red] text-white px-[10px] py-[5px] font-medium;
+  }
+
+  /* .form */
+  .auth-page-1 .form > div {
+    @apply w-full xmd:w-[48%] xl:w-[300px];
+  }
+  .auth-page-2 .form > div {
+    @apply w-full xmd:w-[400px];
+  }
+  .auth-page-1 .form label,
+  .auth-page-2 .form label {
+    @apply text-[17px] 2xl:text-[24px] font-medium;
+  }
+  .auth-page-1 .form input,
+  .auth-page-1 .form select {
+    @apply mt-[5px] w-full px-4 py-2 block border border-[#CCCCCC] rounded-[8px];
+  }
+  .auth-page-2 .form input,
+  .auth-page-2 .form select {
+    @apply mt-[5px] w-full px-4 py-2 block border border-[#CCCCCC] rounded-[8px];
+  }
+  .auth-page-2 .form textarea {
+    @apply mt-[5px] h-[150px] w-full px-4 py-2 block border border-[#CCCCCC] rounded-[8px];
+  }
+  .auth-page-1 .form input[type="number"]::-webkit-outer-spin-button,
+  .auth-page-1 .form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .auth-page-1 .form input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  .auth-page .form select {
+    @apply bg-transparent;
+  }
+
+  .auth-page ul li {
+    @apply text-justify;
+  }
+
+  .add-assignment .content > form > div {
+    @apply flex gap-[30px] items-center;
+  }
+  .add-assignment .content > form > div > p {
+    @apply w-[200px] font-Opensans font-medium;
+  }
+  .add-assignment .content select,
+  .add-assignment .content input,
+  .add-assignment .content textarea {
+    @apply w-[350px] border border-[#949494] p-[5px] rounded-[4px];
+  }
+
+  .table-padding td,
+  .table-padding th {
+    @apply px-[5px] py-[10px];
+  }
+
+  .earnings-table tbody tr {
+    @apply border-b border-[#DDDDDD];
+  }
+  .earnings-table thead th {
+    @apply pb-[15px];
+  }
+  .earnings-table tbody td {
+    @apply py-[15px];
+  }
+}
+
+.side-bar {
+  background-color: rgba(27, 135, 225);
+  background: linear-gradient(
+    180deg,
+    rgba(27, 135, 225, 0.88) 54.967%,
+    rgb(12, 46, 74) 100%
+  );
+}
+
+.subject .line > div::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+}
+
+.progress-tracker .page-nav > span:nth-of-type(1) {
+  box-shadow: 2px 2px 4px 0px rgba(84, 186, 185, 0.3),
+    inset -2px -2px 5px 0px rgba(255, 255, 255, 0.5),
+    inset 1px 1px 4px 0px rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chat-cont::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #d9d9d9;
+  border-radius: 100px;
+}
+.chat-cont::-webkit-scrollbar-thumb {
+  background: #186bad;
+  border-radius: 100px;
+}
+
+.custom-scroll-x::-webkit-scrollbar {
+  height: 5px;
+  background-color: #d9d9d9;
+  border-radius: 100px;
+}
+.custom-scroll-x::-webkit-scrollbar-thumb {
+  background: #186bad;
+  border-radius: 100px;
+}
+
+.select__control {
+  border-radius: 8px !important;
+}
+.rmdp-input {
+  height: 36px !important;
+}
+.rmdp-wrapper > div {
+  width: 220px !important;
+}
+
+/* loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent #ff3d00 #ff3d00;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
