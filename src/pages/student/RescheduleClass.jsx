@@ -12,6 +12,7 @@ import { useUser } from "../../context/userContext";
 import { getStartAndEndDates } from "../../utils/timeConversions";
 import { useAuthContext } from "../../context/authContext";
 import axios from "axios";
+import { BASE_URL } from "../../config";
 
 const localizer = momentLocalizer(moment);
 
@@ -134,7 +135,7 @@ const RescheduleClass = () => {
 
       axios
         .post(
-          "https://formal-saloma-proliferate-41ba3b45.koyeb.app/api/v1/student/reschedule",
+          `${BASE_URL}/api/v1/student/reschedule`,
           {
             classScheduleId: currentEvent.classScheduleId,
             date: formatDate(currentEvent.start),

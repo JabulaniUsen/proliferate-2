@@ -1,7 +1,123 @@
-import React, { useEffect } from 'react'
+// import React, { useEffect, useState } from 'react'
+// import { StreamChat } from 'stream-chat'
+// import { 
+//   Chat,
+//   Channel,
+//   Window,
+//   ChannelHeader,
+//   MessageList,
+//   MessageInput,
+//   Thread,
+//   LoadingIndicator,
+//   ChannelList
+//  } from 'stream-chat-react'
+
+//  import 'stream-chat-react/dist/css/index.css'
+
+//  const apiKey = import.meta.env.VITE_STREAM_API_KEY
+
+//  const user = {
+//   id: 'Jabulani',
+//   name: 'Jabulani',
+//   image: ''
+//  }
+ 
+
+// function TutorMessaging() {
+//   const [client, setClient] = useState(null)
+//   const [channel, setChannel] = useState(null)
+
+//   useEffect(() => {
+//     async function init() {
+//       const chatClient = StreamChat.getInstance(apiKey)
+
+//       await chatClient.connectUser(user, chatClient.devToken(user.id))
+      
+//       const channel = chatClient.channel('messaging', 'react-talk', {
+//         name: 'Proliferate Chat',
+//         image:  '',
+//         members: [user.id]
+//       })
+
+//       await channel.watch()
+
+//       setChannel(channel)
+//       setClient(chatClient)
+//     }
+
+//     init()
+
+//     if(client) return () => client.disconnectUser()
+//   }, [])
+
+//   if(!channel || !client) return <LoadingIndicator />
+
+//   return (
+//     <div>
+//       <Chat client={client} theme='messaging light'>
+//         <ChannelList/>
+//         <Channel>
+//           <Window>
+//             <ChannelHeader />
+//             <MessageList />
+//             <MessageInput />
+//           </Window>
+//           <Thread />
+//         </Channel>
+//       </Chat>
+//     </div>
+//   )
+// }
+
+// export default TutorMessaging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useEffect, useState } from 'react'
 import { ZIMKitManager, Common } from '@zegocloud/zimkit-react'
 import '@zegocloud/zimkit-react/index.css'
-import { useState } from 'react'
 import { APP_ID, APP_SECRET } from '../../components/constants'
 // import { ZIMKit } from '@zegocloud/zimkit-rn';
 
@@ -24,14 +140,14 @@ function TutorMessaging() {
 
   useEffect(() => {
     const init = async () => {
-      const zinkit = new ZIMKitManager();
-      const token = zinkit.generateKitTokenForTest(
+      const zimkit = new ZIMKitManager();
+      const token = zimkit.generateKitTokenForTest(
         state.appConfig.appID, 
         state.appConfig.serverSecret,
         state.userInfo.userID  
       );
-      await zinkit.init(state.appConfig.appID);
-      await zinkit.connectUser(state.userInfo, token);
+      await zimkit.init(state.appConfig.appID);
+      await zimkit.connectUser(state.userInfo, token);
     };
     init()
   }, [])
@@ -47,6 +163,34 @@ function TutorMessaging() {
 }
 
 export default TutorMessaging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

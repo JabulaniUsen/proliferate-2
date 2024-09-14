@@ -143,6 +143,7 @@ function App() {
               path="/classes/upcoming-classes"
               element={<UpcomingClasses />}
             />
+            <Route path="/classes/upcoming-classes/online-classroom/:classId" element={<ClassRoom />} />
             <Route
               path="/classes/reschedule-class"
               element={<RescheduleClass />}

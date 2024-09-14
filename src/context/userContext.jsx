@@ -90,6 +90,7 @@ const UserProvider = ({ children }) => {
     )
       .then((res) => {
         setClasses(res);
+        console.log(res)
       })
       .catch((err) => {
         console.log(err);

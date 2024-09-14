@@ -42,7 +42,7 @@ const TutorSchedule = () => {
   const [schedules, setSchedules] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedClass, setSelectedClass] = useState(null);
-  const navigate = useNavigate(); // Initialize useNavigate for redirection
+  const navigate = useNavigate(); 
   const [roomId, setRoomId] = useState('')
 
   useEffect(() => {
@@ -156,8 +156,8 @@ export default TutorSchedule;
 
 const ScheduleItem = ({ item, setIsOpen, setSelectedClass }) => {
   const handleClick = () => {
-    setSelectedClass(item); // Set the selected class data
-    setIsOpen(true); // Open the modal
+    setSelectedClass(item);
+    setIsOpen(true); 
   };
 
   return (
